@@ -93,6 +93,8 @@ class AdminService
             }
         }
 
+        $this->user->update($data, $id);
+
         if ($phoneIds === null) {
             $phoneIds = [];
         }
@@ -106,8 +108,6 @@ class AdminService
         }
 
         $this->phone->update($phones, $phoneIds);
-
-        $this->user->update($data, $id);
     }
 
     #[NoReturn] private function createNewPhone(array $phones, int $id): void
