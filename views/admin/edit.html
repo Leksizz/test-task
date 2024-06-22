@@ -1,0 +1,60 @@
+<script src="/assets/js/user.js"></script>
+<script src="/assets/js/phones.js"></script>
+<div class="container my-5">
+    <h1 class="text-center my-5">Редактирование пользователя:</h1>
+    <div class="mx-auto col-sm-9">
+        <form action="" method="POST" id="updateForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label"><strong>Имя:</strong></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastname" class="form-label"><strong>Фамилия:</strong></label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Фамилия"
+                           required>
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label"><strong>Электронная почта:</strong></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="company" class="form-label"><strong>Компания:</strong></label>
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Компания"
+                               value="Нет">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="position" class="form-label"><strong>Должность:</strong></label>
+                        <input type="text" class="form-control" id="position" name="position" placeholder="Должность"
+                               value="Нет">
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="phone1" class="form-label"><strong>Телефон 1:</strong></label>
+                        <input type="tel" class="form-control" id="phone1" name="phone1" placeholder="Телефон 1"
+                               value="Нет">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="phone2" class="form-label"><strong>Телефон 2:</strong></label>
+                        <input type="tel" class="form-control" id="phone2" name="phone2" placeholder="Телефон 2"
+                               value="Нет">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="phone3" class="form-label"><strong>Телефон 3:</strong></label>
+                        <input type="tel" class="form-control" id="phone3" name="phone3" placeholder="Телефон 3"
+                               value="Нет">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-3">Отправить</button>
+            <p class="text-danger text-center" id="error"></p>
+        </form>
+    </div>
+</div>
+<script>
+    let form = document.getElementById("updateForm");
+    form.action = "/admin/update/" + window.location.pathname.split('/')[3];
+</script>
+<script src="/assets/js/form.js"></script>
