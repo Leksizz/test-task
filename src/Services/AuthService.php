@@ -28,7 +28,7 @@ class AuthService
             return false;
         }
 
-        if (!password_verify($data['password'], password_hash($user['password'], PASSWORD_BCRYPT))) {
+        if (!password_verify($data['password'], $user['password'])) {
             return false;
         }
 

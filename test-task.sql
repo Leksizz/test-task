@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.2
--- Время создания: Июн 22 2024 г., 22:04
+-- Время создания: Июн 24 2024 г., 16:43
 -- Версия сервера: 8.2.0
 -- Версия PHP: 8.2.18
 
@@ -46,7 +46,7 @@ INSERT INTO `phones` (`id`, `number`) VALUES
 (168, '89876543311'),
 (169, '80003334455'),
 (170, '89996660011'),
-(171, '81112229988'),
+(171, '89137342031'),
 (172, '88099988776'),
 (173, '89996660011'),
 (174, '89996660011'),
@@ -70,8 +70,7 @@ INSERT INTO `phones` (`id`, `number`) VALUES
 (192, '89137789812'),
 (193, '83334445500'),
 (194, '87779990011'),
-(195, '88888888888'),
-(196, '89990001166');
+(195, '88888888888');
 
 -- --------------------------------------------------------
 
@@ -95,7 +94,6 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `company`, `position`, `password`, `role`) VALUES
-(2, 'Иван', 'Иванов', 'admin@admin.ru', 'AdminCompany', 'Администратор', 'admin123', 'admin'),
 (50, 'Alexey', 'Ivanov', 'example@example.ru', 'Example', 'Exampe', '$2y$10$wj4pCARo/YJS/6aW4H1sousIj5vgsscVYQJFO6ITaI22LJnIxAzkW', 'user'),
 (54, 'Petr', 'Olegov', 'oleg@olegg.ru', 'Нет', 'Нет', '$2y$10$T1FgPCAOLcI/l8HUW7MKzecAAZbMaiOTxgWGEUSqDToLzQqnLrDa.', 'user'),
 (55, 'Evgeniy', 'Potapov', 'potapov@mail.ru', 'Potap', 'Teacher', '$2y$10$XFUvpp.AR/CiUSALYSE4buElyHXX8Luj7VPJSBKNPMIPThgFF110S', 'user'),
@@ -116,7 +114,7 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `company`, `position`, `
 (70, 'Kirill', 'Sollv', 'solvd@solvde.ru', 'Shop', 'Director', '$2y$10$G9KCGSEp4T/yLzPzxdlMw.HrWnW6uAWrGSAAmO1Vw8O2rWJIN8zZi', 'user'),
 (71, 'Lev', 'Tigrov', 'tigrov@tigrov.ru', 'Zoo', 'Security', '$2y$10$Lmhzsoxa.miDExf64OpUw.7LkSSgfsIaMgYxPz64caUTz7OTH8j0W', 'user'),
 (72, 'Matvey', 'Nikitov', 'nikitov@nikitov.ru', 'Example', 'Designer', '$2y$10$.G.vYpt9Rnq/me2Z3guviO31D8KQHe817BtTrr8UJ1.vcJE7BP0HG', 'user'),
-(73, 'Alexey', 'Ivanov', 'example@examplemail.ru', 'Example', 'Example', '$2y$10$D0dVS6XgqlsBka57y5Z86.T9MrgEugQEqQSyrCODIgmwMHFfqs/SW', 'user');
+(75, 'Ivan', 'Ivanov', 'admin@admin.ru', NULL, NULL, '$2y$10$i6ckd5oLyJLh.zRyPsZd3.fZLBxbpOzix0XsalkCZKjRsFkxbCWoy', 'admin');
 
 -- --------------------------------------------------------
 
@@ -168,8 +166,7 @@ INSERT INTO `user_phone` (`id`, `user_id`, `phone_id`) VALUES
 (164, 70, 192),
 (165, 71, 193),
 (166, 72, 194),
-(167, 72, 195),
-(168, 73, 196);
+(167, 72, 195);
 
 --
 -- Индексы сохранённых таблиц
@@ -209,7 +206,7 @@ ALTER TABLE `phones`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT для таблицы `user_phone`

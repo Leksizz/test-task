@@ -25,9 +25,11 @@ class AuthController extends Controller
         $authService = new AuthService($this->db(), $this->session());
 
         if (!$this->request()->validate()) {
-            if (!$authService->attempt($this->request()->all())) {
-                $this->response()->json('error', 'Неверный логин или пароль');
-            }
+            $this->response()->json('error', $this->request()->errors());
+        }
+
+        if (!$authService->attempt($this->request()->all())) {
+            $this->response()->json('error', 'Неверный логин или пароль');
         }
 
         $this->response()->redirect('admin/index/1');
