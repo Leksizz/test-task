@@ -44,3 +44,8 @@ const DB_CHARSET = 'utf8';
 ```
 ## Схема базы данных
 Представлена в файле: ```test-task.sql```
+
+## 
+Для входа, как администратор введите:
+email: admin@admin.ru
+password: Admin123
